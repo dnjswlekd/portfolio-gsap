@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+KR:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+address,
+em,
+i {
+  font-style: normal;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.35s;
+}
+header .logo {
+  display: flex;
+  color: #fff;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 30px;
+}
+header nav ul li a {
+  display: block;
+  text-transform: uppercase;
+}
+header nav ul li a .char {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+  overflow: hidden;
+}
+header nav ul li a .char::before, header nav ul li a .char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  color: #fff;
+  transition: transform 0.35s;
+  transition-delay: calc(30ms * var(--char-index));
+}
+header nav ul li a .char::before {
+  transform: translateY(100%);
+}
+header nav ul li a:hover .char::before {
+  transform: translateY(0%);
+  opacity: 1;
+}
+header nav ul li a:hover .char::after {
+  transform: translateY(-100%);
+}
+header header .menu-open {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #333;
+  color: #fff;
+}

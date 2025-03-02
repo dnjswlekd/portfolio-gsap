@@ -1,0 +1,16 @@
+@import 'reset';
+@import 'typography';
+@import 'var';
+@import 'mixin';
+@import 'header';
+body {
+  @include default;
+}
+// 레이아웃
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: map-get($colors, black);
+  color: map-get($colors, white);
+}

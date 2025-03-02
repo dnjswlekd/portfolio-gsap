@@ -1,0 +1,72 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  background-color: map-get($colors, opacity-background);
+  z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.35s;
+
+  .logo {
+    display: flex;
+    color: map-get($colors, white);
+  }
+  nav {
+    ul {
+      display: flex;
+
+      li {
+        margin-left: 30px;
+
+        a {
+          display: block;
+          text-transform: uppercase;
+
+          .char {
+            display: inline-block;
+            position: relative;
+            color: transparent;
+            overflow: hidden;
+
+            &::before,
+            &::after {
+              content: attr(data-char);
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0.6;
+              color: map-get($colors, white);
+              transition: transform 0.35s;
+              transition-delay: calc(30ms * var(--char-index));
+            }
+
+            &::before {
+              transform: translateY(100%);
+            }
+          }
+
+          &:hover {
+            .char {
+              &::before {
+                transform: translateY(0%);
+                opacity: 1;
+              }
+
+              &::after {
+                transform: translateY(-100%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 모바일
+  header .menu-open {
+    display: none;
+  }
+}

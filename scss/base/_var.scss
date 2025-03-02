@@ -1,0 +1,20 @@
+// $themes: (
+//   light: (
+//     background: #fff,
+//     text: #333,
+//   ),
+//   dark: (
+//     background: #333,
+//     text: #fff,
+//   ),
+// );
+$colors: (
+  black: #333,
+  white: #fff,
+  opacity-background: rgba(0, 0, 0, 0.5),
+);
+$font-family: (
+  kor: 'Noto Sans Ko',
+  eng: 'Public Sans',
+  eng2: 'Cormorant',
+);
