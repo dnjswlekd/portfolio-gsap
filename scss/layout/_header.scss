@@ -11,11 +11,20 @@ header {
   justify-content: space-between;
   transition: 0.35s;
 
+  &.active {
+    transform: translateY(-100%);
+  }
   .logo {
     display: flex;
     color: map-get($colors, white);
+    font-family: map-get($font-family, eng);
+    em {
+      font-family: map-get($font-family, eng2);
+      margin-right: 5px;
+    }
   }
   nav {
+    font-family: map-get($font-family, eng);
     ul {
       display: flex;
 
@@ -66,7 +75,7 @@ header {
     }
   }
   // 모바일
-  header .menu-open {
+  .menu-open {
     display: none;
   }
 }
