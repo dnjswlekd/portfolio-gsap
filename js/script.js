@@ -156,3 +156,11 @@ $(function () {
       0
     );
 });
+
+$(function () {
+  $('.con03 .list').simplyScroll({
+    speed: 4,
+    pauseOnHover: false,
+    pauseOnTouch: false,
+  });
+});

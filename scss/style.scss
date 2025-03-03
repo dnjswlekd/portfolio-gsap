@@ -237,7 +237,7 @@ body {
             content: '';
             width: 168px;
             height: 168px;
-            border-radius: 100%;
+            border-radius: 50%;
             border: 1px solid #fff;
             background: url('../images/readMore2.png') no-repeat center / 35px;
             z-index: 3;
@@ -248,7 +248,7 @@ body {
           &::after {
             @include center;
             content: '';
-            border-radius: 100%;
+            border-radius: 50%;
             background: #fff url('../images/readMore3.png') no-repeat center /
               160px;
             animation-name: spin;
@@ -303,6 +303,140 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+// con03
+.con03 {
+  @include fullSection;
+  position: relative;
+  margin-top: 200px;
+
+  .text-wrap {
+    @include center;
+    text-align: left;
+    width: 70%;
+    z-index: 1;
+
+    .title {
+      z-index: 2;
+      text-transform: capitalize;
+      font-size: 18px;
+
+      p {
+        font-family: map-get($font-family, eng);
+        span {
+          font-family: map-get($font-family, eng2);
+        }
+      }
+    }
+
+    ul {
+      li {
+        text-transform: capitalize;
+        font-size: 100px;
+        &:nth-child(2n) {
+          font-family: map-get($font-family, eng2);
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  .list-wrap {
+    .simply-scroll .simply-scroll-clip {
+      overflow: hidden;
+      transform: translate(150%, 400px) rotate(5deg) scale(1.1);
+      opacity: 0;
+
+      .simply-scroll-list {
+        li {
+          filter: brightness(50%);
+          float: left;
+          width: 400px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .btn-wrap {
+      position: absolute;
+      top: 60%;
+      right: -50%;
+      z-index: 3;
+
+      a {
+        display: block;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: relative;
+        transition: 0.35s;
+
+        &::before {
+          @include center;
+          content: '';
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background: #fff url('../images/readMore3.png') no-repeat center /
+            158px;
+          animation-name: spin;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          transition: 0.4s;
+          z-index: 2;
+        }
+
+        img {
+          @include center;
+          width: 22%;
+          transform: translate(-50%, -50%) rotate(45deg);
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          border: transparent;
+
+          img:nth-child(2) {
+            opacity: 1;
+            z-index: 2;
+          }
+
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.motion {
+    .text-wrap ul li p {
+      animation-name: textAni;
+      animation-duration: 1.3s;
+    }
+
+    .simply-scroll .simply-scroll-clip {
+      transform: translate(0%, 400px) rotate(5deg) scale(1.1);
+      opacity: 1;
+      transition: 1.2s;
+      transition-delay: 0.3;
+    }
+
+    .btn-wrap {
+      right: 50%;
+      transition: 1.2s;
     }
   }
 }
