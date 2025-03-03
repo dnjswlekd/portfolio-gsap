@@ -217,7 +217,48 @@ body {
         display: block;
 
         .img-box {
+          position: relative;
+          z-index: 1;
+
+          &::before {
+            @include center;
+            transform: translate(-50%, -50%) rotate(45deg);
+            content: '';
+            width: 168px;
+            height: 168px;
+            border-radius: 100%;
+            border: 1px solid #fff;
+            background: url('../images/readMore2.png') no-repeat center / 35px;
+            z-index: 3;
+            transition: 0.4s;
+            opacity: 0;
+          }
+
+          &::after {
+            @include center;
+            content: '';
+            border-radius: 100%;
+            background: #fff url('../images/readMore3.png') no-repeat center /
+              160px;
+            animation-name: spin;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transition: 0.4s;
+            z-index: 2;
+          }
+
+          @keyframes spin {
+            0% {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+          }
+
           img {
+            transition: 0.35s;
             width: 100%;
           }
         }
@@ -232,6 +273,22 @@ body {
             display: flex;
             justify-content: space-between;
             color: map-get($colors, gray);
+          }
+        }
+
+        &:hover {
+          .img-box {
+            img {
+              filter: brightness(0.7);
+            }
+
+            &::before {
+              opacity: 1;
+            }
+            &::after {
+              width: 168px;
+              height: 168px;
+            }
           }
         }
       }
