@@ -35,7 +35,7 @@ $(function () {
     });
 });
 
-// contents01
+// con01
 $(function () {
   gsap
     .timeline({
@@ -64,6 +64,95 @@ $(function () {
         duration: 10,
         ease: 'none',
       },
+      0
+    );
+  // con02
+  // title
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '.con02',
+        start: '0% 100%',
+        end: '0% 20%',
+        scrub: 1,
+        markers: false,
+      },
+    })
+    .fromTo(
+      '.con02 .title p:nth-child(1)',
+      { x: '-100%' },
+      { x: '0%', duration: 5, ease: 'none' },
+      0
+    )
+    .fromTo(
+      '.con02 .title p:nth-child(2)',
+      { x: '100%' },
+      { x: '0%', duration: 5, ease: 'none' },
+      0
+    );
+
+  // work list
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '.work-list',
+        start: '0% 100%',
+        end: '0% 100%',
+        scrub: 1,
+        markers: true,
+      },
+    })
+    .to(
+      '.wrap',
+      { background: '#000', color: '#fff', ease: 'none', duration: 5 },
+      0
+    )
+
+    // title position fixed
+    .to(
+      '.con02 .title',
+      {
+        position: 'fixed',
+        left: 0,
+        top: 0,
+        ease: 'none',
+        duration: 5,
+      },
+      0
+    )
+
+    // work list position
+    .fromTo(
+      '.work-list',
+      { margin: '0 auto' },
+      {
+        margin: '100vh auto 0 ',
+        position: 'relative',
+        zIndex: '10',
+        duration: 1,
+      },
+      0
+    );
+
+  // work list final
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '.work-list',
+        start: '100% 50%',
+        end: '100% 0%',
+        scrub: 1,
+        markers: false,
+      },
+    })
+    .to(
+      '.con02 .title p:nth-child(1)',
+      { x: '-100%', duration: 5, ease: 'none' },
+      0
+    )
+    .to(
+      '.con02 .title p:nth-child(2)',
+      { x: '100%', duration: 5, ease: 'none' },
       0
     );
 });

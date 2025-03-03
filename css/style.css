@@ -161,6 +161,10 @@ header .menu-open {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
@@ -306,17 +310,19 @@ body {
 .con01 .video-wrap video {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
 }
 .con01 .title {
   position: absolute;
+  width: 100%;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translateY(-50%);
   text-align: center;
+  color: #fff;
 }
 .con01 .title h2 {
   font-size: 80px;
@@ -340,7 +346,6 @@ body {
 }
 .con02 .title p {
   text-transform: capitalize;
-  color: #333;
   font-family: "Public Sans";
 }
 .con02 .title p:nth-child(2) {
@@ -356,7 +361,6 @@ body {
 }
 .con02 .work-list li {
   width: 45%;
-  margin-top: 200px;
 }
 .con02 .work-list li:nth-child(2n) {
   margin-top: 0;

@@ -3,6 +3,10 @@
 @import 'base/var';
 @import 'base/mixin';
 @import 'layout/header';
+* {
+  box-sizing: border-box;
+}
+
 body {
   @include default;
   height: 500vh;
@@ -155,16 +159,24 @@ body {
 }
 .con01 {
   @include fullSection;
+  position: relative;
 
   .video-wrap video {
     @include fullSection;
+    position: absolute;
     top: 0;
     left: 0;
     object-fit: cover;
   }
 
   .title {
-    @include center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    color: map-get($colors, white);
 
     h2 {
       font-size: 80px;
@@ -187,9 +199,9 @@ body {
     line-height: 0.9;
     padding-top: 30vh;
     text-align: center;
+
     p {
       text-transform: capitalize;
-      color: map-get($colors, black);
       font-family: map-get($font-family, eng);
       &:nth-child(2) {
         font-family: map-get($font-family, eng2);
@@ -207,7 +219,6 @@ body {
 
     li {
       width: 45%;
-      margin-top: 200px;
 
       &:nth-child(2n) {
         margin-top: 0;
