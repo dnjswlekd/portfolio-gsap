@@ -173,8 +173,8 @@ $(function () {
 // 모바일 메뉴
 $(function () {
   $('.menu-open').on('click', function () {
-    $('nav').toggleClass('on');
+    $('header nav').toggleClass('on');
     $(this).toggleClass('on');
-    $('body').toggleClass('on');
+    $('body').toggleClass('on'); // 스크롤 방지
   });
 });

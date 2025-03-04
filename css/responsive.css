@@ -176,7 +176,7 @@ footer .text-wrap {
   padding: 0 60px;
 }
 footer .text-wrap .sub-title {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 30px;
   padding-left: 15px;
 }
@@ -280,6 +280,9 @@ footer .bottom ul li {
   }
 }
 @media (max-width: 800px) {
+  body.on {
+    overflow: hidden;
+  }
   .wrap {
     font-size: 16px;
   }
@@ -297,6 +300,11 @@ footer .bottom ul li {
     background-color: #fff;
     color: #333;
     transition: top 0.5s;
+  }
+  header nav.on {
+    width: 100%;
+    height: 100%;
+    top: 0%;
   }
   header nav ul {
     display: block;
@@ -334,7 +342,7 @@ footer .bottom ul li {
     content: "";
     width: 100%;
     height: 1px;
-    background: #fff;
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -345,10 +353,87 @@ footer .bottom ul li {
     content: "";
     width: 100%;
     height: 1px;
-    background: #fff;
+    background-color: #fff;
     position: absolute;
     bottom: 0;
     left: 0;
     transition: 0.35s;
+  }
+  header .menu-open.on {
+    left: -18px;
+  }
+  header .menu-open.on span {
+    z-index: 11;
+  }
+  header .menu-open.on span.a {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #333;
+  }
+  header .menu-open.on span.b {
+    transform: rotate(-45deg) translate(2px, -1px);
+    background-color: #333;
+  }
+  .visual .svg-ani {
+    right: 3%;
+    width: 85%;
+  }
+  .visual .sub-text {
+    padding: 0 50px;
+  }
+  .visual .scroll {
+    left: 50px;
+    bottom: 2%;
+  }
+  .con02 .work-list li {
+    width: 100%;
+  }
+  .con02 .work-list li a:hover .img-box img {
+    filter: none;
+  }
+  .con02 .work-list li a .img-box::before {
+    display: none;
+  }
+  .con02 .work-list li a .img-box::after {
+    display: none;
+  }
+  .con02 .work-list li a .text-box {
+    padding-bottom: 30px;
+  }
+  .con02 .work-list li a .text-box h3 {
+    font-size: 28px;
+  }
+  .con03 .list-wrap .simply-scroll .simply-scroll-clip {
+    transform: translate(5%, 400px) rotate(10deg) scale(1.2);
+  }
+  .con03 .list-wrap .simply-scroll .simply-scroll-clip .simply-scroll-list li {
+    width: 200px;
+  }
+  .con03 .list-wrap .btn-wrap a {
+    width: 90px;
+    height: 90px;
+  }
+  .con03 .list-wrap .btn-wrap a::before {
+    display: none;
+  }
+  .con03 .list-wrap .btn-wrap a:hover {
+    border-color: #fff;
+  }
+  .con03 .list-wrap .btn-wrap a img:nth-child(2) {
+    display: none;
+  }
+  footer {
+    height: 50vh;
+  }
+  footer .text-wrap {
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  footer .text-wrap .sub-title {
+    padding-left: 0;
+  }
+  footer .text-wrap .title {
+    line-height: 1.2;
   }
 }

@@ -176,7 +176,7 @@ footer .text-wrap {
   padding: 0 60px;
 }
 footer .text-wrap .sub-title {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 30px;
   padding-left: 15px;
 }
@@ -593,7 +593,7 @@ body {
   opacity: 0;
 }
 .con03 .list-wrap .btn-wrap a:hover {
-  border: transparent;
+  border-color: transparent;
 }
 .con03 .list-wrap .btn-wrap a:hover img:nth-child(2) {
   opacity: 1;

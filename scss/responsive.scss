@@ -118,6 +118,12 @@
 
 // tablet 800px ~ 501px
 @media (max-width: 800px) {
+  body {
+    &.on {
+      overflow: hidden;
+    }
+  }
+
   .wrap {
     font-size: 16px;
   }
@@ -135,6 +141,12 @@
       background-color: map-get($colors, white);
       color: map-get($colors, black);
       transition: top 0.5s;
+
+      &.on {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+      }
 
       ul {
         display: block;
@@ -181,7 +193,7 @@
           content: '';
           width: 100%;
           height: 1px;
-          background: #fff;
+          background-color: map-get($colors, white);
           position: absolute;
           top: 0;
           left: 0;
@@ -193,12 +205,130 @@
           content: '';
           width: 100%;
           height: 1px;
-          background: #fff;
+          background-color: map-get($colors, white);
           position: absolute;
           bottom: 0;
           left: 0;
           transition: 0.35s;
         }
+      }
+
+      &.on {
+        left: -18px;
+
+        span {
+          z-index: 11;
+          &.a {
+            transform: rotate(45deg) translate(5px, 5px);
+            background-color: map-get($colors, black);
+          }
+
+          &.b {
+            transform: rotate(-45deg) translate(2px, -1px);
+            background-color: map-get($colors, black);
+          }
+        }
+      }
+    }
+  }
+
+  .visual {
+    .svg-ani {
+      right: 3%;
+      width: 85%;
+    }
+
+    .sub-text {
+      padding: 0 50px;
+    }
+
+    .scroll {
+      left: 50px;
+      bottom: 2%;
+    }
+  }
+
+  .con02 {
+    .work-list {
+      li {
+        width: 100%;
+
+        a {
+          &:hover {
+            .img-box {
+              img {
+                filter: none;
+              }
+            }
+          }
+          .img-box {
+            &::before {
+              display: none;
+            }
+            &::after {
+              display: none;
+            }
+          }
+
+          .text-box {
+            padding-bottom: 30px;
+
+            h3 {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .con03 {
+    .list-wrap {
+      .simply-scroll .simply-scroll-clip {
+        transform: translate(5%, 400px) rotate(10deg) scale(1.2);
+        .simply-scroll-list {
+          li {
+            width: 200px;
+          }
+        }
+      }
+
+      .btn-wrap {
+        a {
+          width: 90px;
+          height: 90px;
+
+          &::before {
+            display: none;
+          }
+
+          &:hover {
+            border-color: #fff;
+          }
+
+          img:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 50vh;
+
+    .text-wrap {
+      padding: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .sub-title {
+        padding-left: 0;
+      }
+
+      .title {
+        line-height: 1.2;
       }
     }
   }
