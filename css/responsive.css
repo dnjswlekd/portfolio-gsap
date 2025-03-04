@@ -1,0 +1,25 @@
+@media (max-width: 1650px) {
+  .visual .svg-ani {
+    top: 17%;
+    right: -2%;
+  }
+  .visual .sub-text {
+    margin-left: 10%;
+  }
+  .con03.motion .btn-wrap {
+    right: 10%;
+  }
+}
+@media (max-width: 1300px) {
+  .visual .main-text {
+    font-size: 11vw;
+    width: 100%;
+  }
+  .visual .svg-ani {
+    top: 17%;
+    right: -2%;
+  }
+  .visual .sub-text {
+    margin-left: 7%;
+  }
+}

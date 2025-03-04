@@ -3,6 +3,7 @@
 @import 'base/var';
 @import 'base/mixin';
 @import 'layout/header';
+@import 'layout/footer';
 * {
   box-sizing: border-box;
 }
@@ -26,17 +27,38 @@ body {
   position: relative;
   letter-spacing: -1px;
 
+  .main-text {
+    font-size: 140px;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: map-get($font-family, eng);
+    text-transform: capitalize;
+    margin: 0 0 150px 60px;
+    display: inline-block;
+  }
+
+  .svg-ani {
+    position: absolute;
+    top: 6%;
+    right: -2%;
+    width: 55%;
+    transform: rotate(-10deg);
+  }
+
+  .sub-text {
+    margin-left: 20%;
+  }
+
+  .scroll {
+    position: fixed;
+    left: 60px;
+    bottom: 40px;
+  }
+
   &.motion {
     .main-text {
       transform: translate3d(0, 0, 0) skewY(0deg);
       overflow: hidden;
-      font-size: 140px;
-      font-weight: 400;
-      line-height: 1.2;
-      font-family: map-get($font-family, eng);
-      text-transform: capitalize;
-      margin: 0 0 150px 60px;
-      display: inline-block;
       p {
         overflow: hidden;
         span {
@@ -57,7 +79,6 @@ body {
     }
 
     .sub-text {
-      margin-left: 20%;
       animation-name: textAni2;
       animation-duration: 2.3s;
     }
@@ -141,20 +162,6 @@ body {
     100% {
       stroke-dashoffset: 0;
     }
-  }
-
-  .svg-ani {
-    position: absolute;
-    top: 6%;
-    right: 0%;
-    width: 55%;
-    transform: rotate(10deg);
-  }
-
-  .scroll {
-    position: fixed;
-    left: 60px;
-    bottom: 40px;
   }
 }
 .con01 {

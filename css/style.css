@@ -161,6 +161,60 @@ header .menu-open {
   display: none;
 }
 
+footer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+footer .text-wrap {
+  position: absolute;
+  top: 30%;
+  text-align: left;
+  font-family: "Public Sans";
+  padding: 0 60px;
+}
+footer .text-wrap .sub-title {
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+footer .text-wrap .sub-title span {
+  text-transform: capitalize;
+  font-family: "Cormorant";
+}
+footer .text-wrap .title {
+  font-size: 160px;
+  line-height: 1;
+}
+footer .text-wrap .title span {
+  font-family: "Cormorant";
+  margin-bottom: 20px;
+}
+footer .text-wrap .title a {
+  display: block;
+}
+footer .bottom {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+footer .bottom ul {
+  display: flex;
+  gap: 30px;
+}
+footer .bottom ul li {
+  text-transform: capitalize;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -188,9 +242,7 @@ body {
   position: relative;
   letter-spacing: -1px;
 }
-.visual.motion .main-text {
-  transform: translate3d(0, 0, 0) skewY(0deg);
-  overflow: hidden;
+.visual .main-text {
   font-size: 140px;
   font-weight: 400;
   line-height: 1.2;
@@ -198,6 +250,25 @@ body {
   text-transform: capitalize;
   margin: 0 0 150px 60px;
   display: inline-block;
+}
+.visual .svg-ani {
+  position: absolute;
+  top: 6%;
+  right: -2%;
+  width: 55%;
+  transform: rotate(-10deg);
+}
+.visual .sub-text {
+  margin-left: 20%;
+}
+.visual .scroll {
+  position: fixed;
+  left: 60px;
+  bottom: 40px;
+}
+.visual.motion .main-text {
+  transform: translate3d(0, 0, 0) skewY(0deg);
+  overflow: hidden;
 }
 .visual.motion .main-text p {
   overflow: hidden;
@@ -215,7 +286,6 @@ body {
   animation-duration: 1.5s;
 }
 .visual.motion .sub-text {
-  margin-left: 20%;
   animation-name: textAni2;
   animation-duration: 2.3s;
 }
@@ -288,18 +358,6 @@ body {
   100% {
     stroke-dashoffset: 0;
   }
-}
-.visual .svg-ani {
-  position: absolute;
-  top: 6%;
-  right: 0%;
-  width: 55%;
-  transform: rotate(10deg);
-}
-.visual .scroll {
-  position: fixed;
-  left: 60px;
-  bottom: 40px;
 }
 
 .con01 {

@@ -1,0 +1,60 @@
+footer {
+  position: relative;
+  @include fullSection;
+  background-color: map-get($colors, opacity-background);
+  color: #fff;
+
+  .text-wrap {
+    position: absolute;
+    top: 30%;
+    text-align: left;
+    font-family: map-get($font-family, eng);
+    padding: 0 60px;
+
+    .sub-title {
+      font-size: 16px;
+      margin-bottom: 30px;
+      padding-left: 15px;
+
+      span {
+        text-transform: capitalize;
+        font-family: map-get($font-family, eng2);
+      }
+    }
+
+    .title {
+      font-size: 160px;
+      line-height: 1;
+      span {
+        font-family: map-get($font-family, eng2);
+        margin-bottom: 20px;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    letter-spacing: -1px;
+
+    ul {
+      display: flex;
+      gap: 30px;
+
+      li {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
