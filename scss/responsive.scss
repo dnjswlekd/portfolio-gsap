@@ -1,3 +1,10 @@
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/var';
+@import 'base/mixin';
+@import 'layout/header';
+@import 'layout/footer';
+
 // pc 1650px ~ 1301px
 @media (max-width: 1650px) {
   .visual {
@@ -107,4 +114,96 @@
       font-size: 20px;
     }
   }
+}
+
+// tablet 800px ~ 501px
+@media (max-width: 800px) {
+  .wrap {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 3%;
+    nav {
+      position: fixed;
+      overflow: hidden;
+      top: -100%;
+      left: 0;
+      z-index: 10;
+      width: 0%;
+      height: 0%;
+      background-color: map-get($colors, white);
+      color: map-get($colors, black);
+      transition: top 0.5s;
+
+      ul {
+        display: block;
+        width: 80%;
+        margin: 20% auto;
+
+        li {
+          margin-left: 0;
+
+          &:nth-child(2) {
+            font-family: map-get($font-family, eng2);
+          }
+
+          a {
+            font-size: 15vw;
+            line-height: 1.4;
+            letter-spacing: -1px;
+
+            .char {
+              color: map-get($colors, black);
+              overflow: inherit;
+
+              &::before,
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .menu-open {
+      display: block;
+      position: relative;
+      width: 32px;
+      height: 10px;
+      margin-top: 10px;
+      transition: top 0.5s;
+
+      span {
+        &.a {
+          display: block;
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 0.35s;
+        }
+
+        &.b {
+          display: block;
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: 0.35s;
+        }
+      }
+    }
+  }
+}
+
+// mobile 320px
+@media (max-width: 320px) {
 }
