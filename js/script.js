@@ -1,3 +1,8 @@
+// a 태그 클릭이벤트 막기
+$(document).on('click', 'a[href="#"]', function (e) {
+  e.preventDefault();
+});
+
 // 1. 스플리팅 호출
 $(function () {
   Splitting();
