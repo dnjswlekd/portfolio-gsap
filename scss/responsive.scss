@@ -45,7 +45,7 @@
       margin-left: 0%;
       position: absolute;
       width: 100%;
-      padding: 0px 60px;
+      padding: 0px 5%;
       left: 0;
     }
   }
@@ -238,12 +238,8 @@
       width: 85%;
     }
 
-    .sub-text {
-      padding: 0 50px;
-    }
-
     .scroll {
-      left: 50px;
+      left: 5%;
       bottom: 2%;
     }
   }
@@ -334,6 +330,81 @@
   }
 }
 
-// mobile 320px
-@media (max-width: 320px) {
+// mobile 500px ~ 401px
+@media (max-width: 500px) {
+  .visual {
+    padding-top: 70px;
+
+    .main-text {
+      margin-left: 16px;
+    }
+
+    .svg-ani {
+      right: 5%;
+      width: 90%;
+      top: 30%;
+    }
+
+    .sub-text {
+      bottom: 10%;
+      padding: 16px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .scroll {
+      left: 4%;
+    }
+  }
+
+  .con02 {
+    .title {
+      p {
+        &:nth-child(2) {
+          font-size: 25vw;
+        }
+      }
+    }
+  }
+
+  .con03 {
+    .text-wrap {
+      ul {
+        li {
+          &:nth-child(2n) {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .bottom {
+      font-size: 16px;
+      padding: 0 35px;
+
+      ul {
+        gap: 10px;
+      }
+    }
+  }
+}
+
+// mobile 400px ~
+@media (max-width: 400px) {
+  .con03 {
+    .list-wrap {
+      .simply-scroll .simply-scroll-clip {
+        transform: translate(5%, 250px) rotate(10deg) scale(1.2);
+        .simply-scroll-list {
+          li {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -241,7 +241,7 @@ footer .bottom ul li {
     margin-left: 0%;
     position: absolute;
     width: 100%;
-    padding: 0px 60px;
+    padding: 0px 5%;
     left: 0;
   }
   footer .text-wrap .title a {
@@ -377,11 +377,8 @@ footer .bottom ul li {
     right: 3%;
     width: 85%;
   }
-  .visual .sub-text {
-    padding: 0 50px;
-  }
   .visual .scroll {
-    left: 50px;
+    left: 5%;
     bottom: 2%;
   }
   .con02 .work-list li {
@@ -435,5 +432,49 @@ footer .bottom ul li {
   }
   footer .text-wrap .title {
     line-height: 1.2;
+  }
+}
+@media (max-width: 500px) {
+  .visual {
+    padding-top: 70px;
+  }
+  .visual .main-text {
+    margin-left: 16px;
+  }
+  .visual .svg-ani {
+    right: 5%;
+    width: 90%;
+    top: 30%;
+  }
+  .visual .sub-text {
+    bottom: 10%;
+    padding: 16px;
+  }
+  .visual .sub-text br {
+    display: none;
+  }
+  .visual .scroll {
+    left: 4%;
+  }
+  .con02 .title p:nth-child(2) {
+    font-size: 25vw;
+  }
+  .con03 .text-wrap ul li:nth-child(2n) {
+    padding-left: 5px;
+  }
+  footer .bottom {
+    font-size: 16px;
+    padding: 0 35px;
+  }
+  footer .bottom ul {
+    gap: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .con03 .list-wrap .simply-scroll .simply-scroll-clip {
+    transform: translate(5%, 250px) rotate(10deg) scale(1.2);
+  }
+  .con03 .list-wrap .simply-scroll .simply-scroll-clip .simply-scroll-list li {
+    width: 200px;
   }
 }
