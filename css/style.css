@@ -523,6 +523,9 @@ body {
 .con03 .text-wrap .title p span {
   font-family: "Cormorant";
 }
+.con03 .text-wrap ul {
+  line-height: 1.1;
+}
 .con03 .text-wrap ul li {
   text-transform: capitalize;
   font-size: 100px;

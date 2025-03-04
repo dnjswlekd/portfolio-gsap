@@ -27,7 +27,38 @@
     padding: 0px 60px;
     left: 0;
   }
+  footer .text-wrap .title a {
+    font-size: 110px;
+  }
+}
+@media (max-width: 1024px) {
+  .visual .svg-ani {
+    top: 36%;
+    width: 76%;
+    right: -1%;
+  }
+  .con01 .title h2 {
+    font-size: 7vw;
+  }
+  .con02 .title {
+    font-size: 18vw;
+  }
+  .con02 .work-list {
+    width: 90%;
+  }
+  .con03 .text-wrap {
+    width: 85%;
+  }
+  .con03 .text-wrap ul li {
+    font-size: 12vw;
+  }
   footer .text-wrap .title {
-    font-size: 144px;
+    font-size: 12vw;
+  }
+  footer .text-wrap .title a {
+    font-size: 9vw;
+  }
+  footer .bottom {
+    font-size: 20px;
   }
 }
