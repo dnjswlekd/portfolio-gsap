@@ -16,10 +16,18 @@
     width: 100%;
   }
   .visual .svg-ani {
-    top: 17%;
-    right: -2%;
+    top: 39%;
+    width: 56%;
   }
   .visual .sub-text {
-    margin-left: 7%;
+    bottom: 8%;
+    margin-left: 0%;
+    position: absolute;
+    width: 100%;
+    padding: 0px 60px;
+    left: 0;
+  }
+  footer .text-wrap .title {
+    font-size: 144px;
   }
 }
