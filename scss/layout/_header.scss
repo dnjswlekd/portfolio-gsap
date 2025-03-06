@@ -9,7 +9,7 @@ header {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  transition: 0.35s;
+  transition: all 0.35s;
 
   &.active {
     transform: translateY(-100%);

@@ -248,7 +248,7 @@ body {
             border: 1px solid #fff;
             background: url('../images/readMore2.png') no-repeat center / 35px;
             z-index: 3;
-            transition: 0.4s;
+            transition: all 0.4s;
             opacity: 0;
           }
 
@@ -262,7 +262,7 @@ body {
             animation-duration: 10s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-            transition: 0.4s;
+            transition: all 0.4s;
             z-index: 2;
           }
 
@@ -276,7 +276,7 @@ body {
           }
 
           img {
-            transition: 0.35s;
+            transition: all 0.35s;
             width: 100%;
           }
         }
@@ -385,7 +385,7 @@ body {
         border-radius: 50%;
         border: 2px solid #fff;
         position: relative;
-        transition: 0.35s;
+        transition: all 0.35s;
 
         &::before {
           @include center;
@@ -399,7 +399,7 @@ body {
           animation-duration: 10s;
           animation-iteration-count: infinite;
           animation-timing-function: linear;
-          transition: 0.4s;
+          transition: all 0.4s;
           z-index: 2;
         }
 
@@ -439,13 +439,13 @@ body {
     .simply-scroll .simply-scroll-clip {
       transform: translate(0%, 400px) rotate(5deg) scale(1.1);
       opacity: 1;
-      transition: 1.2s;
+      transition: all 1.2s;
       transition-delay: 0.3;
     }
 
     .btn-wrap {
       right: 50%;
-      transition: 1.2s;
+      transition: all 1.2s;
     }
   }
 }
